@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_day">#C8F2E9</color>
+    <color name="primary_night">#C8F2E9</color>
+    <color name="primary_dark">#4DBAE8</color>
+    <color name="secondary">#C8F2E9</color>
+    <color name="secondary_variant">#C8F2E9</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#848484</color>
+    <color name="red">#F42222</color>
+</resources>

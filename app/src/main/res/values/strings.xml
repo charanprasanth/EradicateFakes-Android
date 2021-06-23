@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Eradicate Fakes</string>
+    <string name="desc">Product Image</string>
+    <string name="toolbar">Product</string>
+    <string name="tabName1">Features</string>
+    <string name="tabName2">Description</string>
+    <string name="text">Eradicate Fakes let you verify the Genuineness of the product. To learn more <b><u>click here</u></b>.</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

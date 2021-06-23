@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="AuthenticationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="45dp"
+                android:gravity="center_horizontal"
+                android:text="LOGO"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <RelativeLayout
+                android:layout_marginTop="70dp"
+                android:id="@+id/img"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="333dp">
+
+                <RelativeLayout
+                    android:layout_width="400dp"
+                    android:layout_height="300dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/truck">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:src="@drawable/check"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="35dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_height="100dp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/PhoneNumberLayout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:background="@drawable/cardview_bg"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/CountryCode"
+                    android:layout_width="0dp"
+                    android:minWidth="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    app:ccpDialog_backgroundColor="@color/white"
+                    app:ccp_countryPreference="IN"
+                    app:ccp_defaultNameCode="US"
+                    app:ccp_autoFormatNumber="true"
+                    app:ccp_hintExampleNumber="true"
+                    app:ccpDialog_textColor="@color/black"
+                    app:ccp_showNameCode="false"
+                    app:ccp_textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/MobileNum"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="Phone Number"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="#848484"/>
+
+            </LinearLayout>
+
+            <com.skydoves.elasticviews.ElasticLayout
+                app:layout_scale="1.02"
+                app:layout_duration="500"
+                android:id="@+id/sendOtp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/verify_btn_bg"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send OTP"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"/>
+
+            </com.skydoves.elasticviews.ElasticLayout>
+
+            <TextView
+                android:id="@+id/ContinueAgree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginEnd="45dp"
+                android:gravity="center_horizontal"
+                android:text="By continuing, you agree to our Terms of Service and Privacy Policy."
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

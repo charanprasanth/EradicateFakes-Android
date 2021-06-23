@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "822765363966",
+    "project_id": "eradicate-fakes",
+    "storage_bucket": "eradicate-fakes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822765363966:android:d8796414d848f2e773bbaf",
+        "android_client_info": {
+          "package_name": "com.eradicatefakes.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822765363966-ammot0tn0sslve253vsik5vrichungd7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB03qKQ4cMNZmzCsjksBfJNylHvevV2x-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822765363966-ammot0tn0sslve253vsik5vrichungd7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

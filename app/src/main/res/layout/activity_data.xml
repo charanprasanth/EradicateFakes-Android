@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DataActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/primary_dark"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            android:fitsSystemWindows="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_collapseMode="pin">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:src="@drawable/iphone"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <!--<ImageView
+                    android:id="@+id/type"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="15dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/genuine"/>-->
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/white_gradient"/>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title="Product Details"
+                app:layout_collapseMode="pin"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp">
+
+                <RelativeLayout
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/type"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/type"
+                        android:id="@+id/typeText"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@color/grey"/>
+
+            <TableLayout
+                android:id="@+id/Table"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_height="15dp"/>
+
+                <!--<View
+                    android:id="@+id/view1"
+                    android:layout_height="0.5dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey"/>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_height="20dp"/>-->
+
+                <TableRow
+                    android:id="@+id/row1"
+                    android:padding="8dp"
+                    android:layout_marginTop="3dp">
+
+                    <TextView
+                        android:id="@+id/col1"
+                        android:textColor="@color/grey"
+                        android:layout_marginStart="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="100dp"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:text="Serial number"/>
+
+                    <TextView
+                        android:id="@+id/data1"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="3"
+                        android:textSize="18sp"
+                        android:text=""/>
+
+                </TableRow>
+
+                <View
+                    android:id="@+id/v2"
+                    android:layout_height="0.5dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey"/>
+
+                <View
+                    android:id="@+id/v22"
+                    android:layout_height="20dp"/>
+
+                <TableRow
+                    android:id="@+id/row2"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/col2"
+                        android:textColor="@color/grey"
+                        android:layout_marginStart="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="100dp"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:text="Product name"/>
+
+                    <TextView
+                        android:id="@+id/data2"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="3"
+                        android:textSize="18sp"
+                        android:text=""/>
+
+                </TableRow>
+
+                <View
+                    android:id="@+id/v3"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/grey"/>
+
+                <View
+                    android:id="@+id/v33"
+                    android:layout_height="20dp"/>
+
+                <TableRow
+                    android:id="@+id/row3"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/col3"
+                        android:textColor="@color/grey"
+                        android:layout_marginStart="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="100dp"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:text="Product description"/>
+
+                    <TextView
+                        android:id="@+id/data3"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="3"
+                        android:textSize="18sp"
+                        android:text=""/>
+
+                </TableRow>
+
+                <View
+                    android:id="@+id/v4"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/grey"/>
+
+                <View
+                    android:id="@+id/v44"
+                    android:layout_height="20dp"/>
+
+                <TableRow
+                    android:id="@+id/row4"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/col4"
+                        android:textColor="@color/grey"
+                        android:layout_marginStart="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="100dp"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:text="SKU"/>
+
+                    <TextView
+                        android:id="@+id/data4"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="3"
+                        android:textSize="18sp"
+                        android:text=""/>
+
+                </TableRow>
+
+                <View
+                    android:id="@+id/v5"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/grey"/>
+
+                <View
+                    android:id="@+id/v55"
+                    android:layout_height="20dp"/>
+
+                <TableRow
+                    android:id="@+id/row5"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/col5"
+                        android:textColor="@color/grey"
+                        android:layout_marginStart="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="100dp"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:text="Country of Origin"/>
+
+                    <TextView
+                        android:id="@+id/data5"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="3"
+                        android:textSize="18sp"
+                        android:text=""/>
+
+                </TableRow>
+
+                <View
+                    android:id="@+id/v6"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/grey"/>
+
+                <View
+                    android:id="@+id/v66"
+                    android:layout_height="20dp"/>
+
+                <!--
+
+               <TableRow
+                   android:id="@+id/row6"
+                   android:padding="8dp">
+
+                   <TextView
+                       android:id="@+id/col6"
+                       android:textColor="@color/grey"
+                       android:layout_marginStart="20dp"
+                       android:layout_height="wrap_content"
+                       android:layout_width="100dp"
+                       android:layout_weight="1"
+                       android:textSize="18sp"
+                       android:text="@string/tabName1"/>
+
+                   <TextView
+                       android:id="@+id/data6"
+                       android:textColor="@color/black"
+                       android:layout_height="wrap_content"
+                       android:layout_width="0dp"
+                       android:layout_marginStart="10dp"
+                       android:layout_weight="3"
+                       android:textSize="18sp"
+                       android:text="@string/tabName2"/>
+
+               </TableRow>
+
+               <View
+                   android:id="@+id/v7"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginEnd="15dp"
+                   android:layout_height="0.5dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_width="match_parent"
+                   android:background="@color/grey"/>
+
+               <View
+                   android:id="@+id/v77"
+                   android:layout_height="20dp"/>
+
+               <TableRow
+                   android:id="@+id/row7"
+                   android:padding="8dp">
+
+                   <TextView
+                       android:id="@+id/col7"
+                       android:textColor="@color/grey"
+                       android:layout_marginStart="20dp"
+                       android:layout_height="wrap_content"
+                       android:layout_width="100dp"
+                       android:layout_weight="1"
+                       android:textSize="18sp"
+                       android:text="@string/tabName1"/>
+
+                   <TextView
+                       android:id="@+id/data7"
+                       android:textColor="@color/black"
+                       android:layout_height="wrap_content"
+                       android:layout_width="0dp"
+                       android:layout_marginStart="10dp"
+                       android:layout_weight="3"
+                       android:textSize="18sp"
+                       android:text="@string/tabName2"/>
+
+               </TableRow>
+
+               <View
+                   android:id="@+id/v8"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginEnd="15dp"
+                   android:layout_height="0.5dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_width="match_parent"
+                   android:background="@color/grey"/>
+
+               <View
+                   android:id="@+id/v88"
+                   android:layout_height="20dp"/>
+
+               <TableRow
+                   android:id="@+id/row8"
+                   android:padding="8dp">
+
+                   <TextView
+                       android:id="@+id/col8"
+                       android:textColor="@color/grey"
+                       android:layout_marginStart="20dp"
+                       android:layout_height="wrap_content"
+                       android:layout_width="100dp"
+                       android:layout_weight="1"
+                       android:textSize="18sp"
+                       android:text="@string/tabName1"/>
+
+                   <TextView
+                       android:id="@+id/data8"
+                       android:textColor="@color/black"
+                       android:layout_height="wrap_content"
+                       android:layout_width="0dp"
+                       android:layout_marginStart="10dp"
+                       android:layout_weight="3"
+                       android:textSize="18sp"
+                       android:text="@string/tabName2"/>
+
+               </TableRow>
+
+               <View
+                   android:id="@+id/v9"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginEnd="15dp"
+                   android:layout_height="0.5dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_width="match_parent"
+                   android:background="@color/grey"/>
+
+               <View
+                   android:id="@+id/v99"
+                   android:layout_height="20dp"/>
+
+               <TableRow
+                   android:id="@+id/row9"
+                   android:padding="8dp">
+
+                   <TextView
+                       android:id="@+id/col9"
+                       android:textColor="@color/grey"
+                       android:layout_marginStart="20dp"
+                       android:layout_height="wrap_content"
+                       android:layout_width="100dp"
+                       android:layout_weight="1"
+                       android:textSize="18sp"
+                       android:text="@string/tabName1"/>
+
+                   <TextView
+                       android:id="@+id/data9"
+                       android:textColor="@color/black"
+                       android:layout_height="wrap_content"
+                       android:layout_width="0dp"
+                       android:layout_marginStart="10dp"
+                       android:layout_weight="3"
+                       android:textSize="18sp"
+                       android:text="@string/tabName2"/>
+
+               </TableRow>
+
+               <View
+                   android:id="@+id/v10"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginEnd="15dp"
+                   android:layout_height="0.5dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_width="match_parent"
+                   android:background="@color/grey"/>
+
+               <View
+                   android:id="@+id/v100"
+                   android:layout_height="20dp"/>
+
+               <TableRow
+                   android:id="@+id/row10"
+                   android:padding="8dp">
+
+                   <TextView
+                       android:id="@+id/col10"
+                       android:textColor="@color/black"
+                       android:layout_marginStart="20dp"
+                       android:layout_height="wrap_content"
+                       android:layout_width="wrap_content"
+                       android:layout_weight="1"
+                       android:textSize="18sp"
+                       android:text="@string/tabName1"/>
+
+                   <TextView
+                       android:id="@+id/data10"
+                       android:textColor="@color/black"
+                       android:layout_height="wrap_content"
+                       android:layout_width="0dp"
+                       android:layout_marginStart="10dp"
+                       android:layout_weight="3"
+                       android:textSize="18sp"
+                       android:text="@string/tabName2"/>
+
+               </TableRow>
+
+               <View
+                   android:layout_marginStart="15dp"
+                   android:layout_marginEnd="15dp"
+                   android:layout_height="0.5dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_width="match_parent"
+                   android:background="@color/grey"/>
+
+               -->
+
+            </TableLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="30dp"
+        android:id="@+id/fab"
+        app:fabSize="normal"
+        app:backgroundTint="@color/primary_dark"
+        app:elevation="5dp"
+        app:tint="@android:color/white"
+        app:rippleColor="@color/secondary"
+        android:src="@drawable/ic_home"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
