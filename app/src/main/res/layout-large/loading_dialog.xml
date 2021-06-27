@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="550dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/close"
+            android:layout_width="27dp"
+            android:src="@drawable/ic_close"
+            android:layout_margin="15dp"
+            android:layout_height="27dp"/>
+
+    </RelativeLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingAnimation"
+        android:layout_width="350dp"
+        android:visibility="visible"
+        android:layout_height="430dp"
+        android:layout_gravity="center"
+        app:lottie_rawRes="@raw/loading_animation"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/invalidAnimation"
+        android:visibility="gone"
+        android:layout_width="430dp"
+        android:layout_height="430dp"
+        android:layout_gravity="center"
+        app:lottie_rawRes="@raw/invalid_animation"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/successAnimation"
+        android:visibility="gone"
+        android:layout_width="430dp"
+        android:layout_height="430dp"
+        android:layout_gravity="center"
+        app:lottie_rawRes="@raw/success_animation"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/matchNotFoundAnimation"
+        android:visibility="gone"
+        android:layout_width="430dp"
+        android:layout_height="430dp"
+        android:layout_gravity="center"
+        app:lottie_rawRes="@raw/matchnotfound_animation"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Please Wait, Loading.."
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

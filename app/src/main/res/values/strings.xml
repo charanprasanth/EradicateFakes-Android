@@ -4,6 +4,6 @@
     <string name="toolbar">Product</string>
     <string name="tabName1">Features</string>
     <string name="tabName2">Description</string>
-    <string name="text">Eradicate Fakes let you verify the Genuineness of the product. To learn more <b><u>click here</u></b>.</string>
+    <string name="text">Eradicate Fakes let you verify the <br>Genuineness of the product. To learn</br><br>more <b><u>click here</u></b></br>.</string>
     <string name="title_activity_maps">Map</string>
 </resources>

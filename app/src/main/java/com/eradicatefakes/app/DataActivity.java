@@ -43,6 +43,15 @@ public class DataActivity extends AppCompatActivity {
         img = extras.getString("img");
         count = extras.getString("count");
 
+//        key = "key";
+//        col1 = "col1";
+//        col2 = "col2";
+//        col3 = "col3";
+//        col4 = "col4";
+//        col5 = "col5";
+//        img = "col6";
+//        count = "0";
+
         fab = findViewById(R.id.fab);
         fab.setOnClickListener(view -> {
             Intent intent = new Intent(DataActivity.this, MainActivity.class);

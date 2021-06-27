@@ -116,27 +116,30 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="@id/verticalGuideline5"
             app:layout_constraintEnd_toEndOf="@id/verticalGuideline6"
+            app:layout_constraintBottom_toTopOf="@id/horizontalGuideline7"
             android:id="@+id/layout"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/t"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Welcome to"
                 android:layout_gravity="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginTop="10dp"
                 android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/t0"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Eradicate Fakes"
+                android:gravity="center"
                 android:layout_gravity="center"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -145,19 +148,46 @@
 
         </LinearLayout>
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.29"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.49" />
+
         <TextView
             android:id="@+id/t1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
             android:gravity="center"
             android:text="@string/text"
             android:textColor="@color/white"
             android:textSize="21sp"
             app:layout_constraintEnd_toEndOf="@id/verticalGuideline6"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/verticalGuideline5"
-            app:layout_constraintTop_toBottomOf="@id/layout" />
+            app:layout_constraintTop_toTopOf="@id/horizontalGuideline7"
+            app:layout_constraintBottom_toTopOf="@id/horizontalGuideline8"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
 
         <TextView
             android:id="@+id/t2"
@@ -168,12 +198,10 @@
             android:text="Click the button below to scan the QR code and verify the product's originality"
             android:textColor="@color/white"
             android:textSize="17sp"
-            app:layout_constraintBottom_toTopOf="@id/scanQRBtn"
+            app:layout_constraintBottom_toTopOf="@id/horizontalGuideline10"
             app:layout_constraintEnd_toEndOf="@id/verticalGuideline6"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@id/verticalGuideline5"
-            app:layout_constraintTop_toBottomOf="@id/t1"
-            app:layout_constraintVertical_bias="0.792" />
+            app:layout_constraintTop_toTopOf="@id/horizontalGuideline9" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/horizontalGuideline5"

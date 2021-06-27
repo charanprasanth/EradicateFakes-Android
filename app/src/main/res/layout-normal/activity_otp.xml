@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:id="@+id/layout"
+    tools:context="OtpActivity">
+
+    <LinearLayout
+        android:elevation="10dp"
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/Backwards"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="back"
+                android:layout_marginEnd="10dp"
+                android:textSize="20sp"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/actionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/img"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="333dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/blob_gradient"
+                    android:layout_marginTop="30dp"
+                    android:layout_height="match_parent"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:src="@drawable/otp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_height="200dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/SentTO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Verification code has been sent to this number"
+                android:layout_below="@id/img"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+911231231231"
+                android:textColor="@color/black"
+                android:layout_below="@id/SentTO"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Please, enter the code to verify."
+                android:layout_below="@id/number"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/VerifyOtp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/text2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/verticalGuideline1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.05"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/verticalGuideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.95"/>
+
+                <com.chaos.view.PinView
+                    android:id="@+id/pinView"
+                    style="@style/PinWidget.PinView"
+                    app:layout_constraintStart_toStartOf="@id/verticalGuideline1"
+                    app:layout_constraintEnd_toEndOf="@id/verticalGuideline2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="true"
+                    android:inputType="number"
+                    android:itemBackground="@drawable/item_background"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:cursorColor="@color/black"
+                    app:itemCount="6"
+                    app:itemHeight="50dp"
+                    app:itemRadius="4dp"
+                    app:itemSpacing="10dp"
+                    app:lineColor="@color/white"
+                    app:itemWidth="50dp"
+                    app:lineWidth="1dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.skydoves.elasticviews.ElasticLayout
+                app:layout_scale="1.02"
+                app:layout_duration="500"
+                android:id="@+id/verifyBtn"
+                android:layout_width="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_height="50dp"
+                android:background="@drawable/verify_btn_bg"
+                android:layout_below="@id/VerifyOtp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verify"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"/>
+
+            </com.skydoves.elasticviews.ElasticLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/verifyBtn"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Didn't receive the code?  "
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/DidntReceive"/>
+
+                <TextView
+                    android:id="@+id/resendOTP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resend now"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="2dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

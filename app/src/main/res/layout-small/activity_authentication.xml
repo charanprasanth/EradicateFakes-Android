@@ -26,15 +26,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="35dp"
                 android:layout_marginEnd="45dp"
                 android:gravity="center_horizontal"
                 android:text="LOGO"
                 android:textColor="@color/black"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <RelativeLayout
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="20dp"
                 android:id="@+id/img"
                 android:layout_marginStart="20dp"
                 android:layout_gravity="center_horizontal"
@@ -120,6 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Send OTP"
+                    android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/white"
                     android:layout_gravity="center"/>
@@ -131,14 +132,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="45dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="30dp"
-                android:layout_marginEnd="45dp"
+                android:layout_marginEnd="30dp"
                 android:gravity="center_horizontal"
                 android:text="By continuing, you agree to our Terms of Service and Privacy Policy."
                 android:textColor="#575757"
-                android:textSize="12sp" />
+                android:textSize="11sp" />
 
         </LinearLayout>
 

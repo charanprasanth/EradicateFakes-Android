@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/primary_dark"
     tools:context=".MainActivity">
 
     <com.skydoves.elasticviews.ElasticLayout
@@ -24,21 +25,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.018"/>
+        app:layout_constraintGuide_percent="0.02"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horizontalGuideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.061" />
+        app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/verticalGuideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.863"/>
+        app:layout_constraintGuide_percent="0.91"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/verticalGuideline2"
@@ -47,51 +48,258 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.968" />
 
-    <RelativeLayout
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/horizontalGuideline3"
-        app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline4"
-        android:id="@+id/img"
-        android:layout_width="0dp"
-        android:layout_height="0dp">
-
-        <ImageView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:src="@drawable/blob_main"
-            android:layout_height="match_parent"/>
-
-        <com.airbnb.lottie.LottieAnimationView
-            app:lottie_rawRes="@raw/truckloading_animation"
-            app:lottie_autoPlay="true"
-            android:layout_width="match_parent"
-            android:layout_centerInParent="true"
-            android:layout_height="match_parent"/>
-
-    </RelativeLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.032" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horizontalGuideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.085"/>
+        app:layout_constraintGuide_percent="0.08" />
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline3"
+        app:layout_constraintEnd_toStartOf="@id/logout"
+        app:layout_constraintBottom_toTopOf="@id/horizontalGuideline4"
+        android:id="@+id/layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/t0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eradicate Fakes"
+            android:gravity="center"
+            android:layout_gravity="start"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:letterSpacing="0.05"/>
+
+        <TextView
+            android:id="@+id/t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="Lorem ipsum gjvsj isdiufe"
+            android:layout_gravity="start"
+            android:textSize="29sp"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horizontalGuideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.119" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.945" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintBottom_toTopOf="@id/horizontalGuideline5"
         app:layout_constraintTop_toBottomOf="@id/horizontalGuideline4"
+        app:layout_constraintStart_toEndOf="@id/verticalGuideline3"
+        app:layout_constraintEnd_toStartOf="@id/verticalGuideline2"
+        android:id="@+id/page"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/sheet_white_bg" >
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalGuideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.065"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalGuideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.935"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.035"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55"/>
+
+        <RelativeLayout
+            app:layout_constraintStart_toStartOf="@id/verticalGuideline7"
+            app:layout_constraintEnd_toEndOf="@id/verticalGuideline8"
+            app:layout_constraintTop_toTopOf="@id/horizontalGuideline7"
+            app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline8"
+            android:id="@+id/img"
+            android:layout_width="0dp"
+            android:layout_height="0dp">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:src="@drawable/blob_main"
+                android:layout_height="match_parent"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                app:lottie_rawRes="@raw/truckloading_animation"
+                app:lottie_autoPlay="true"
+                android:layout_width="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.73"/>
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Eradicate Fakes let you verify the Genuineness of the product. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. To learn more Click here."
+            android:textColor="#575757"
+            android:textSize="27sp"
+            app:layout_constraintBottom_toTopOf="@id/horizontalGuideline9"
+            app:layout_constraintEnd_toEndOf="@id/verticalGuideline8"
+            app:layout_constraintStart_toStartOf="@id/verticalGuideline7"
+            app:layout_constraintTop_toTopOf="@id/horizontalGuideline8"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline91"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.77"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85"/>
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/scanQRBtn"
+            android:gravity="center"
+            android:text="Click the button below to scan the QR code and verify the product's originality"
+            android:textColor="#575757"
+            android:textSize="27sp"
+            app:layout_constraintBottom_toTopOf="@id/horizontalGuideline10"
+            app:layout_constraintEnd_toEndOf="@id/verticalGuideline8"
+            app:layout_constraintStart_toStartOf="@id/verticalGuideline7"
+            app:layout_constraintTop_toTopOf="@id/horizontalGuideline91" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.87"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.955"/>
+
+        <com.skydoves.elasticviews.ElasticLayout
+            app:layout_constraintEnd_toEndOf="@id/verticalGuideline8"
+            app:layout_constraintStart_toStartOf="@id/verticalGuideline7"
+            app:layout_constraintTop_toBottomOf="@id/horizontalGuideline11"
+            app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline12"
+            app:layout_scale="1.03"
+            app:layout_duration="500"
+            android:id="@+id/scanQRBtn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/blue_button_bg">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:text="Scan QR Code"
+                android:gravity="center"
+                android:textSize="29sp"/>
+
+        </com.skydoves.elasticviews.ElasticLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="©2021 Eradicate Fakes. All rights reserved. "
+        android:gravity="center"
+        android:textSize="23sp"
+        android:textColor="@color/white"/>
+
+    <!--
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@id/horizontalGuideline2"
         app:layout_constraintBottom_toBottomOf="parent"
         android:id="@+id/page"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/sheet_bg" >
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.085"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.45" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -116,48 +324,78 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="@id/verticalGuideline5"
             app:layout_constraintEnd_toEndOf="@id/verticalGuideline6"
+            app:layout_constraintBottom_toTopOf="@id/horizontalGuideline7"
             android:id="@+id/layout"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/t"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Welcome to"
                 android:layout_gravity="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/t0"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Eradicate Fakes"
+                android:gravity="center"
                 android:layout_gravity="center"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
 
         </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.29"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.49" />
 
         <TextView
             android:id="@+id/t1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
             android:gravity="center"
             android:text="@string/text"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="21sp"
             app:layout_constraintEnd_toEndOf="@id/verticalGuideline6"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/verticalGuideline5"
-            app:layout_constraintTop_toBottomOf="@id/layout" />
+            app:layout_constraintTop_toTopOf="@id/horizontalGuideline7"
+            app:layout_constraintBottom_toTopOf="@id/horizontalGuideline8"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
 
         <TextView
             android:id="@+id/t2"
@@ -166,14 +404,12 @@
             android:layout_above="@id/scanQRBtn"
             android:gravity="center"
             android:text="Click the button below to scan the QR code and verify the product's originality"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="17sp"
-            app:layout_constraintBottom_toTopOf="@id/scanQRBtn"
+            app:layout_constraintBottom_toTopOf="@id/horizontalGuideline10"
             app:layout_constraintEnd_toEndOf="@id/verticalGuideline6"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@id/verticalGuideline5"
-            app:layout_constraintTop_toBottomOf="@id/t1"
-            app:layout_constraintVertical_bias="0.792" />
+            app:layout_constraintTop_toTopOf="@id/horizontalGuideline9" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/horizontalGuideline5"
@@ -203,28 +439,9 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.975" />
 
-        <com.skydoves.elasticviews.ElasticLayout
-            app:layout_constraintEnd_toEndOf="@id/verticalGuideline4"
-            app:layout_constraintStart_toStartOf="@id/verticalGuideline3"
-            app:layout_constraintTop_toBottomOf="@id/horizontalGuideline5"
-            app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline6"
-            app:layout_scale="1.03"
-            app:layout_duration="500"
-            android:id="@+id/scanQRBtn"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/button_bg">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColor="@color/black"
-                android:text="Scan QR Code"
-                android:gravity="center"
-                android:textSize="20sp"/>
-
-        </com.skydoves.elasticviews.ElasticLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

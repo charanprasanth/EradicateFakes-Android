@@ -29,34 +29,49 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="45dp"
                 android:gravity="center_horizontal"
-                android:text="LOGO"
+                android:text="Eradicate Fakes"
+                android:letterSpacing="0.02"
                 android:textColor="@color/black"
-                android:textSize="30dp" />
+                android:textStyle="bold"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="45dp"
+                android:gravity="center_horizontal"
+                android:text="Sed ut perspiciatis unde omnis iste natus"
+                android:letterSpacing="0.02"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
 
             <RelativeLayout
                 android:layout_marginTop="70dp"
                 android:id="@+id/img"
                 android:layout_marginStart="20dp"
-                android:layout_gravity="center_horizontal"
                 android:layout_marginEnd="20dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
                 android:layout_width="wrap_content"
-                android:layout_height="333dp">
+                android:layout_height="433dp">
 
                 <RelativeLayout
-                    android:layout_width="400dp"
-                    android:layout_height="300dp"
+                    android:layout_width="500dp"
+                    android:layout_height="400dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="30dp"
                     android:background="@drawable/truck">
 
                     <ImageView
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:src="@drawable/check"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_margin="35dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_height="100dp"/>
+                        android:layout_marginTop="50dp"
+                        android:layout_marginStart="63dp"
+                        android:layout_height="120dp"/>
 
                 </RelativeLayout>
 
@@ -65,10 +80,10 @@
             <LinearLayout
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:id="@+id/PhoneNumberLayout"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:background="@drawable/cardview_bg"
                 android:orientation="horizontal"
@@ -112,7 +127,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="60dp"
                 android:background="@drawable/verify_btn_bg"
                 android:layout_marginTop="15dp">
 
@@ -120,7 +135,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Send OTP"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
                     android:textColor="@color/white"
                     android:layout_gravity="center"/>
 
@@ -138,7 +154,7 @@
                 android:gravity="center_horizontal"
                 android:text="By continuing, you agree to our Terms of Service and Privacy Policy."
                 android:textColor="#575757"
-                android:textSize="12sp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
